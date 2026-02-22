@@ -120,6 +120,46 @@ Coffee
 
 ### Task 4: Document and Maintain
 
+#### Implementation Summary
+
+**Book Class** ([`lib/book.py`](lib/book.py)):
+- Represents a book with title and page count
+- `title`: Required string attribute for the book's title
+- `page_count`: Required integer attribute (validated via property); prints warning if non-integer value is attempted
+- `turn_page()`: Method that prints "Flipping the page...wow, you read fast!"
+
+**Coffee Class** ([`lib/coffee.py`](lib/coffee.py)):
+- Represents a coffee with size and price
+- `size`: Required string attribute (must be "Small", "Medium", or "Large"; validated via property); prints warning if invalid size is attempted
+- `price`: Required float attribute for the coffee's price
+- `tip()`: Method that prints "This coffee is great, here’s a tip!" and increases the price by 1
+
+#### Setup Instructions
+
+1. **Install Dependencies**:
+   ```bash
+   pipenv install
+   ```
+
+2. **Activate Virtual Environment**:
+   ```bash
+   pipenv shell
+   ```
+
+3. **Run Tests**:
+   ```bash
+   # Run all tests
+   pytest -v
+
+   # Run Book class tests only
+   pytest -v lib/testing/book_test.py
+
+   # Run Coffee class tests only
+   pytest -v lib/testing/coffee_test.py
+   ```
+
+All tests are passing successfully.
+
 Best Practice documentation steps:
 * Add comments to code to explain purpose and logic. This clarifies intent / functionality of code to other developers
 * Add screenshot of completed work included in Markdown in README.
